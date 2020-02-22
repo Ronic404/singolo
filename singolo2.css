@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 1020px;
+  margin: 0 auto;
+  font-size: 10px;
+  font-family: "Lato", "Verdana", sans-serif;
+}
+
+.title {
+  color: #666d89;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.subtitle {
+  color: #767e9e;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 3rem;
+}
+
+.wrapper {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.layout-4-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.layout-3-column {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.employee__socials {
+  display: flex;
+  justify-content: space-between;
+  width: 152px;
+  margin-top: 25px;
+}
+
+.soc-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #666d89;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.soc-icon:hover {
+  transform: rotateY(360deg);
+  filter: hue-rotate(140deg);
+}
+
+.soc-icon__facebook {
+  background-image: url(assets/img_2/soc_icons/facebook.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.soc-icon__google {
+  background: url(assets/img_2/soc_icons/google.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.soc-icon__twitter {
+  background: url(assets/img_2/soc_icons/twitter.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.soc-icon__linkedin {
+  background: url(assets/img_2/soc_icons/linkedin.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.portfolio {
+  background: #2d303a;
+  padding: 60px 0 47px 0;
+  border-bottom: 6px solid #323746;
+}
+
+.portfolio__subtitle {
+  margin-top: 18px;
+}
+
+.portfolio__list {
+  display: flex;
+  list-style: none;
+  margin: 11px 0;
+}
+
+.portfolio__item {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  padding: 2px 5px 3px 7px;
+  border: 1px solid #767e9e;
+  border-radius: 5px;
+  color: #767e9e;
+  cursor: pointer;
+}
+
+.portfolio__item:hover {
+  border-color: #c5c5c5;
+  color: #c5c5c5;
+}
+
+.portfolio__images {
+  margin-top: 19px;
+  height: 621px;
+  overflow: hidden;
+}
+
+.portfolio__image {
+  margin-bottom: 20px;
+}
+
+.about-us {
+  padding: 59px 0 67px;
+  border-bottom: 6px solid #ffffff;
+  background: #f2f2f2;
+}
+
+.about-us__subtitle {
+  margin-top: 18px;
+  text-align: justify;
+}
+
+.about-us__employees {
+  margin-top: 45px;
+}
+
+.employee {
+  width: 300px;
+}
+
+.employee__name {
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 3rem;
+  color: #666d89;
+  margin-top: 9px;
+  margin-left: -1px;
+  white-space: nowrap;
+}
+
+.employee__text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2.1rem;
+  color: #767e9e;
+  margin-top: 4px;
+  word-spacing: -1px;
+}
+
+/*# sourceMappingURL=singolo2.css.map */
