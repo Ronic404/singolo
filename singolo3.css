@@ -174,25 +174,25 @@ footer {
   }
   
   .soc-icon__facebook {
-    background-image: url(../Sin/assets/img_3/soc_icons/facebook.png);
+    background-image: url(assets/img_3/soc_icons/facebook.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
   
   .soc-icon__google {
-    background: url(../Sin/assets/img_3/soc_icons/google.png);
+    background: url(assets/img_3/soc_icons/google.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
   
   .soc-icon__twitter {
-    background: url(../Sin/assets/img_3/soc_icons/twitter.png);
+    background: url(assets/img_3/soc_icons/twitter.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
   
   .soc-icon__linkedin {
-    background: url(../Sin/assets/img_3/soc_icons/linkedin.png);
+    background: url(assets/img_3/soc_icons/linkedin.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
