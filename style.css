@@ -33,13 +33,14 @@ header {
     text-decoration: none;    
 }
 
-h1 {
+.main-title {
     color: #ffffff;
     text-transform: uppercase; 
     font-size: 2.5rem;
     font-weight: bold;
     font-family: 'Lato', sans-serif;
     letter-spacing: -0.5px;
+    margin-top: -2px;
 }
 
 span {
@@ -104,14 +105,11 @@ span {
     top: 281px;
 }
 
-img:hover {
-    cursor: pointer;
-}
-
 .left-arrow:hover,
 .right-arrow:hover {
     opacity: 0.5;
     transform: scale(1.2);
+    cursor: pointer;
 }
 
 .our-services-block {
@@ -125,7 +123,7 @@ img:hover {
     font-family: 'Lato', sans-serif;
     font-size: 3rem;
     font-weight: 900;
-    padding-top: 60px;
+    padding-top: 59px;
     letter-spacing: -0.001em;
 }
 
@@ -168,6 +166,7 @@ img:hover {
 
 .our-services-block__img {
     align-self: start;
+    margin-top: 1px;
 }
 
 .layout-3-column__text {
@@ -211,13 +210,14 @@ img:hover {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    margin-top: 1px;
   }
   
   .employee__socials {
     display: flex;
     justify-content: space-between;
     width: 152px;
-    margin-top: 23px;
+    margin-top: 24px;
   }
   
   .soc-icon {
@@ -261,7 +261,7 @@ img:hover {
   
   .portfolio {
     background: #2d303a;
-    padding-bottom: 46px;
+    padding-bottom: 47px;
     border-bottom: 6px solid #323746;
   }
   
@@ -312,7 +312,7 @@ img:hover {
   }
   
   .about-us__employees {
-    margin-top: 44px;
+    margin-top: 45px;
   }
   
   .employee {
@@ -344,7 +344,7 @@ img:hover {
 
 .get-a-quote {
     background-color: #f06c64;
-    padding: 60px 0 50.5px;
+    padding: 60px 0 50px;
     border-bottom: 6px solid #ea676b;
 }
 
@@ -476,7 +476,8 @@ footer {
     display: inline-flex;
     align-items: center;
     color: #666d89;
-    padding-top: 21px;
+    padding-top: 19px;
+    padding-left: 2px;
     letter-spacing: -0.1px;
 }
 
@@ -524,3 +525,7 @@ footer {
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }  
+
+  .soc-icon__footer {
+    margin-top: -2px;
+  }
