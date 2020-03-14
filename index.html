@@ -17,13 +17,13 @@
                 <ul class="navigation">
                     <li><a href="#" class="navigation__item">Home</a></li>
                     <span class="navigation__dot">.</span>
-                    <li><a href="#" class="navigation__item">Services</a></li>
+                    <li><a href="#services" class="navigation__item">Services</a></li>
                     <span class="navigation__dot">.</span>
-                    <li><a href="#" class="navigation__item">Portfolio</a></li>
+                    <li><a href="#portfolio" class="navigation__item">Portfolio</a></li>
                     <span class="navigation__dot">.</span>
-                    <li><a href="#" class="navigation__item">About</a></li>
+                    <li><a href="#about" class="navigation__item">About</a></li>
                     <span class="navigation__dot">.</span>
-                    <li><a href="#" class="navigation__item">Contact</a></li>
+                    <li><a href="#contact" class="navigation__item">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,9 +34,13 @@
             <img class="verphone" src="assets/img/verphone.png" width="240" height="483" alt="Phone">
             <img class="gorphone" src="assets/img/gorphone.png" width="484" height="240" alt="Phone">
             <img class="right-arrow" src="assets/img/right.png" alt="">
+            <div class="button-phone button-verphone"></div>
+            <div class="button-phone button-gorphone"></div>
+            <div class="black-screen black-screen__verphone hidden"></div>
+            <div class="black-screen black-screen__gorphone hidden"></div>
         </div>
     </section>
-    <section class="our-services-block">
+    <section class="our-services-block" id="services">
         <div class="wrapper">
             <h2 class="title">Our Services</h2>
             <p class="description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
@@ -92,15 +96,15 @@
             </div>
         </div>  
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="wrapper">
             <h2 class="title portfolio__title">Portfolio</h2>
             <p class="subtitle portfolio__subtitle">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
             <ul class="portfolio__list">
-                <li class="portfolio__item">All</li>
-                <li class="portfolio__item">Web Design</li>
-                <li class="portfolio__item">Graphic Design</li>
-                <li class="portfolio__item">Artwork</li>
+                <li class="portfolio__item" id="portfolio__item-1">All</li>
+                <li class="portfolio__item" id="portfolio__item-2">Web Design</li>
+                <li class="portfolio__item" id="portfolio__item-3">Graphic Design</li>
+                <li class="portfolio__item" id="portfolio__item-4">Artwork</li>
             </ul>        
             <div class="portfolio__images layout-4-column">
                 <img src="assets/img_2/Portfolio/1.jpg" alt="picture 1" class="portfolio__image">
@@ -118,7 +122,7 @@
             </div>
         </div>
     </section>
-    <section class="about-us">
+    <section class="about-us" id="about">
         <div class="wrapper">
             <h2 class="title about-us__title">About Us</h2>
             <p class="subtitle about-us__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -177,7 +181,7 @@
             </div>
         </div>
     </section>
-    <section class="get-a-quote">
+    <section class="get-a-quote" id="contact">
         <div class="wrapper">
             <h2 class="get-a-quote__title">Get a Quote</h2>
             <p class="get-a-quote__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -188,8 +192,8 @@
                         <input type="email" name="email" id="email" placeholder="Email (Required)" required>
                         <input type="text" name="subject" id="subject" placeholder="Subject">
                         <textarea name="describe" id="describe" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
-                        <button type="submit">Submit</button>
-                    </form>
+                        <button type="submit" id="send">Send</button>
+                     </form>
                 </div> 
                 <div class="contact-information">
                     <h3 class="contact-information__title">Contact Information</h3>
@@ -220,8 +224,16 @@
                             <p><a href="mailto:info@singolo.com">info@singolo.com</a></p>
                         </div>
                     </div>
-                </div>               
-            </div>            
+                </div>  
+                <div class="message-block message-block-hidden">
+                    <div class="message">
+                        <p><span class="message_text text-1"></span></p>
+                        <p><span class="message_text text-2"></span></p>
+                        <p><span class="message_text text-3"></span></p>
+                        <button type="button" id="close-button">ОК</button>
+                    </div>
+                </div>             
+            </div>  
         </div>
     </section>
     <footer class="footer">
@@ -235,5 +247,6 @@
             </div>
         </div>    
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
