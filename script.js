@@ -4,6 +4,7 @@ window.onload = function() {
     addPortfolioTagsClickHandler();
     addPortfolioImagesClickHandler();
     addContactsFormSendHandler();
+    addSliderClickHandler();
 }
 
 const addHeaderNavigationClickHandler = () => {
@@ -75,4 +76,55 @@ const addContactsFormSendHandler = () => {
         document.body.style.overflow = "";
         document.body.style.paddingRight = "";
     })
+}
+
+const addSliderClickHandler = () => {
+    let items = document.querySelectorAll('.slider-block__item');
+    let currentItem = 0;
+    let isEnabled = true;
+
+    let changeCurrentItem = function(n) {
+        currentItem = (n + items.length) % items.length; 
+    }
+
+    let hideItem = function(direction) {
+        isEnabled = false;
+        items[currentItem].classList.add(direction);
+        items[currentItem].addEventListener('animationend', function() {
+            this.classList.remove('slider-active', direction);
+        });
+    }
+
+    let showItem = function(direction) {
+        items[currentItem].classList.add('next', direction);
+        items[currentItem].addEventListener('animationend', function() {
+            this.classList.remove('next', direction);
+            this.classList.add('slider-active');
+            isEnabled = true;
+        });
+    }
+
+    let previousItem = function(n) {
+        hideItem('to-right');
+        changeCurrentItem(n - 1);
+        showItem('from-left');
+    }
+
+    let nextItem = function(n) {
+        hideItem('to-left');
+        changeCurrentItem(n + 1);
+        showItem('from-right');
+    }
+
+    document.querySelector('.control-left').addEventListener('click', function() {
+        if(isEnabled) {
+            previousItem(currentItem);
+        }
+    });
+
+    document.querySelector('.control-right').addEventListener('click', function() {
+        if(isEnabled) {
+            nextItem(currentItem);
+        }
+    });
 }
