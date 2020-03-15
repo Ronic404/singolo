@@ -83,11 +83,11 @@ const addSliderClickHandler = () => {
     let currentItem = 0;
     let isEnabled = true;
 
-    let changeCurrentItem = function(n) {
+    const changeCurrentItem = (n) => {
         currentItem = (n + items.length) % items.length; 
     }
 
-    let hideItem = function(direction) {
+    const hideItem = function(direction) {
         isEnabled = false;
         items[currentItem].classList.add(direction);
         items[currentItem].addEventListener('animationend', function() {
@@ -95,7 +95,7 @@ const addSliderClickHandler = () => {
         });
     }
 
-    let showItem = function(direction) {
+    const showItem = function(direction) {
         items[currentItem].classList.add('next', direction);
         items[currentItem].addEventListener('animationend', function() {
             this.classList.remove('next', direction);
@@ -104,25 +104,25 @@ const addSliderClickHandler = () => {
         });
     }
 
-    let previousItem = function(n) {
+    const previousItem = (n) => {
         hideItem('to-right');
         changeCurrentItem(n - 1);
         showItem('from-left');
     }
 
-    let nextItem = function(n) {
+    const nextItem = (n) => {
         hideItem('to-left');
         changeCurrentItem(n + 1);
         showItem('from-right');
     }
 
-    document.querySelector('.control-left').addEventListener('click', function() {
+    document.querySelector('.control-left').addEventListener('click', () => {
         if(isEnabled) {
             previousItem(currentItem);
         }
     });
 
-    document.querySelector('.control-right').addEventListener('click', function() {
+    document.querySelector('.control-right').addEventListener('click', () => {
         if(isEnabled) {
             nextItem(currentItem);
         }
