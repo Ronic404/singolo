@@ -1,5 +1,7 @@
 window.onload = function() {
     addHeaderNavigationClickHandler();
+    addOnScroll();
+    addResizeHeader();
     addPhoneButtonClickHandler();
     addPortfolioTagsClickHandler();
     addPortfolioImagesClickHandler();
@@ -16,6 +18,34 @@ const addHeaderNavigationClickHandler = () => {
             item.target.classList.add('navigation__item_active');
         }
     })
+}
+
+const addOnScroll = () => {
+    document.addEventListener('scroll', (event) => {
+        const currentPosition = window.scrollY;
+
+        document.querySelectorAll('section').forEach(el => {
+            if(el.offsetTop <= currentPosition && (el.offsetTop + el.offsetHeight) > currentPosition) {
+                document.querySelectorAll('.header .navigation__item').forEach(item => {
+                    item.classList.remove('navigation__item_active');
+                    if(el.getAttribute('id') === item.getAttribute('href').substring(1)) {
+                        item.classList.add('navigation__item_active');
+                    }
+                });                
+            }
+        });
+    })
+}
+
+const addResizeHeader = () => {
+    document.addEventListener('scroll', () => {
+        console.log(window.scrollY);
+        if(window.scrollY > 200) {
+            document.querySelector(".header__flex").style.height = '35px';
+        } else {
+            document.querySelector(".header__flex").style.height = '';
+        }
+    });
 }
 
 const addPhoneButtonClickHandler = () => {
@@ -75,6 +105,9 @@ const addContactsFormSendHandler = () => {
         document.querySelector('.message-block').classList.add('message-block-hidden');
         document.body.style.overflow = "";
         document.body.style.paddingRight = "";
+        [...document.forms.form.elements].forEach(el => {
+            el.value = '';
+        })
     })
 }
 
