@@ -1,4 +1,5 @@
 window.onload = function() {
+    addBurgerMenuClick();
     addHeaderNavigationClickHandler();
     addOnScroll();
     addResizeHeader();
@@ -6,12 +7,29 @@ window.onload = function() {
     addPortfolioTagsClickHandler();
     addPortfolioImagesClickHandler();
     addContactsFormSendHandler();
-    addSliderClickHandler();
+    addSliderClickHandler();    
+}
+
+const addBurgerMenuClick = () => {
+    document.querySelector('.burger').addEventListener('click', () => {
+        document.querySelector('.burger').classList.toggle('burger_active');
+        setTimeout(showMenu, 500);        
+    })
+
+    const showMenu = () => {
+        document.querySelector('.navigation').classList.toggle('navigation_mobile');
+        document.querySelector('.header__flex').classList.toggle('header__flex_mobile');
+        document.querySelector(".header__flex").style.height = '';
+    }   
 }
 
 const addHeaderNavigationClickHandler = () => {
-    document.querySelector('.header .navigation').addEventListener('click', (item) => {
+    document.querySelector('.header .navigation').addEventListener('click', (item) => {        
         if(item.target.classList.contains('navigation__item')) {
+            document.querySelector('.burger').classList.remove('burger_active');
+            document.querySelector('.navigation').classList.remove('navigation_mobile');
+            document.querySelector('.header__flex').classList.remove('header__flex_mobile');
+
             document.querySelectorAll('.header .navigation__item').forEach(item => {
                 item.classList.remove('navigation__item_active');
             });
@@ -39,11 +57,12 @@ const addOnScroll = () => {
 
 const addResizeHeader = () => {
     document.addEventListener('scroll', () => {
-        console.log(window.scrollY);
         if(window.scrollY > 200) {
             document.querySelector(".header__flex").style.height = '35px';
+            document.querySelector('.burger').style.top = '5px'
         } else {
             document.querySelector(".header__flex").style.height = '';
+            document.querySelector('.burger').style.top = ''
         }
     });
 }
