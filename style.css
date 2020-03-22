@@ -170,7 +170,7 @@ span {
   left: 112px;
   width: 240px;
   height: 483px;
-  background-image: url(/assets/img/verphone.png);
+  background-image: url(./assets/img/verphone.png);
   background-size: contain;
 }
 
@@ -180,7 +180,7 @@ span {
   right: 111px;
   width: 484px;
   height: 240px;
-  background-image: url(/assets/img/gorphone.png);
+  background-image: url(./assets/img/gorphone.png);
   background-size: contain;
 }
 
