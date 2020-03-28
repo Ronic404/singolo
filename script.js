@@ -13,6 +13,7 @@ window.onload = function() {
 const addBurgerMenuClick = () => {
     document.querySelector('.burger').addEventListener('click', () => {
         document.querySelector('.burger').classList.toggle('burger_active');
+        document.body.classList.toggle('body-hidden');
         setTimeout(showMenu, 500);        
     })
 
@@ -29,6 +30,7 @@ const addHeaderNavigationClickHandler = () => {
             document.querySelector('.burger').classList.remove('burger_active');
             document.querySelector('.navigation').classList.remove('navigation_mobile');
             document.querySelector('.header__flex').classList.remove('header__flex_mobile');
+            document.body.classList.remove('body-hidden');
 
             document.querySelectorAll('.header .navigation__item').forEach(item => {
                 item.classList.remove('navigation__item_active');
