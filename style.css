@@ -800,7 +800,7 @@ footer {
 
 
 
-  @media screen and (max-width: 1020px) {
+  @media screen and (max-width: 1019px) {
     .our-services-block__blocs {
       flex-basis: 46%; 
       justify-content: space-evenly;
